@@ -1,0 +1,2 @@
+-r OC_SORT/requirements.txt
+-r scripts/requirements.txt
