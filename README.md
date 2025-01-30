@@ -51,13 +51,13 @@ Outputs will be saved under `YOLOX_outputs/smot4sb`.
 
 ### Prediction
 
-To make predictions using the trained model saved under `YOLOX_outputs/smot4sb`, run the following command:
+To make predictions using the trained model, run the following command:
 
 ```sh
 sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB/pub_test --ckpt YOLOX_outputs/smot4sb/best_ckpt.pth.tar
 ```
 
-Outputs will be saved under `YOLOX_outputs/smot4sb/results` as MOT Challenge format.
+Outputs will be saved under `YOLOX_outputs/smot4sb/predictions` as MOT Challenge format.
 
 ### Visualization
 
