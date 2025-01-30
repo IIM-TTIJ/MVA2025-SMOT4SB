@@ -1,4 +1,8 @@
+.venv/
+
 YOLOX_outputs/
 
 eval_inputs/
 eval_outputs/
+
+datasets/
