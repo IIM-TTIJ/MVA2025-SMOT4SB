@@ -59,6 +59,16 @@ sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB
 
 Outputs will be saved under `YOLOX_outputs/smot4sb/predictions` as MOT Challenge format.
 
+### Submission
+
+To submit the predictions, you need to compress the prediction txt files into a zip file. Run the following command to do so:
+
+```sh
+python3 scripts/create_submission.py -i YOLOX_outputs/smot4sb/predictions/pub_test/
+```
+
+The submission file will be saved as `YYYY-MM-DD_hh-mm-ss.zip`.
+
 ### Visualization
 
 To visualize the predictions, run the following command:
