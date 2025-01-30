@@ -68,3 +68,28 @@ python3 scripts/visualize_for_mot_ch.py -m YOLOX_outputs/smot4sb/results/0.txt -
 ```
 
 This will generate a video named `prediction_0.mp4` in the cwd.
+
+### Evaluation for validation dataset
+
+For evaluation, the ground truth (gt) and predictions must be in the format and directory structure compatible with TrackEval. The following commands prepare the necessary files:
+
+```sh
+# Make predictions on the validation data
+sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB/val--ckpt YOLOX_outputs/smot4sb/best_ckpt.pth.tar
+
+# Modify the directory structure of the predictions
+python scripts/cp_preds_for_eval.py -i YOLOX_outputs/smot4sb/predictions/val/ -o eval_inputs
+
+# Prepare the gt
+python3 scripts/oc_sort_ann_to_mot_ch.py -i OC_SORT/datasets/SMOT4SB/annotations/val.json -o eval_inputs
+```
+
+The conversion results will be output to the `eval_inputs` directory.
+
+Next, evaluate using the following command:
+
+```sh
+python3 TrackEval/scripts/run_smot4sb_challenge.py eval_inputs eval_outputs  val --metric-smot4sb
+```
+
+The evaluation results will be saved in the `eval_outputs` directory.
