@@ -2,14 +2,12 @@
 
 ## About Baseline Code
 
-## Requirements
+### Requirements
 
 - Python 3.8.20
 - FFmpeg (Required if using the visualizer in scripts/visualize_for_mot_sub.py)
 
-## Usage
-
-### Installation
+### Usage
 
 #### Dataset preparation
 
@@ -39,7 +37,7 @@ cd OC_SORT
 python3 setup.py develop
 ```
 
-### Training
+#### Training
 
 First, get the COCO-pretrained YOLOX model from [this link](https://github.com/Megvii-BaseDetection/YOLOX/tree/0.1.0) and save them under `OC_SORT/pretrained`.
 
@@ -49,7 +47,7 @@ sh scripts/train.sh -f OC_SORT/exps/smot4sb.py -d 8 -b 48 --fp16 -c OC_SORT/pret
 
 Outputs will be saved under `YOLOX_outputs/smot4sb`.
 
-### Prediction
+#### Prediction
 
 To make predictions using the trained model, run the following command:
 
@@ -59,7 +57,7 @@ sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB
 
 Outputs will be saved under `YOLOX_outputs/smot4sb/predictions` as MOT Challenge format.
 
-### Submission
+#### Submission
 
 To submit the predictions, you need to compress the prediction txt files into a zip file. Run the following command to do so:
 
@@ -69,7 +67,7 @@ python3 scripts/create_submission.py -i YOLOX_outputs/smot4sb/predictions/pub_te
 
 The submission file will be saved as `<YYYY-MM-DD_hh-mm-ss>.zip`.
 
-### Visualization
+#### Visualization
 
 To visualize the predictions, run the following command:
 
@@ -79,7 +77,7 @@ python3 scripts/visualize_for_mot_ch.py -m YOLOX_outputs/smot4sb/results/0.txt -
 
 This will generate a video named `prediction_0.mp4` in the cwd.
 
-### Evaluation for validation dataset
+#### Evaluation for validation dataset
 
 For evaluation, the ground truth (gt) and predictions must be in the format and directory structure compatible with TrackEval. The following commands prepare the necessary files:
 
