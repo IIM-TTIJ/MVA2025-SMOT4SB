@@ -127,7 +127,7 @@ python3 setup.py develop
 
 #### 3️⃣ Training
 
-First, get the COCO-pretrained YOLOX model from [this link](https://github.com/Megvii-BaseDetection/YOLOX/tree/0.1.0) and save them under `OC_SORT/pretrained`.
+First, get the COCO-pretrained YOLOX model from [this link](https://github.com/Megvii-BaseDetection/YOLOX/tree/0.1.0?tab=readme-ov-file#benchmark) (select from the "weights" column) and save them under `OC_SORT/pretrained`.
 
 ```sh
 sh scripts/train.sh -f OC_SORT/exps/smot4sb.py -d 8 -b 48 --fp16 -c OC_SORT/pretrained/yolox_x.pth
