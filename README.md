@@ -8,7 +8,7 @@
 
 <div align="center">
 
-🚀 [**Challenge Page**](https://mva-org.jp/mva2025/challenge) **|** 📂 [**Dataset (TBA)**]((https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#) **|** 🔥 [**Baseline Code**](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB) **|** 📊 [**Leaderboard**](https://www.codabench.org/competitions/5101/)
+🚀 [**Challenge Page**](https://mva-org.jp/mva2025/challenge) **|** 📂 [**Dataset (TBA)**](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#) **|** 🔥 [**Baseline Code**](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB) **|** 📊 [**Leaderboard**](https://www.codabench.org/competitions/5101/)
 
 [![GitHub stars](https://img.shields.io/github/stars/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/network/members)
