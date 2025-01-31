@@ -67,7 +67,7 @@ To submit the predictions, you need to compress the prediction txt files into a 
 python3 scripts/create_submission.py -i YOLOX_outputs/smot4sb/predictions/pub_test/
 ```
 
-The submission file will be saved as `YYYY-MM-DD_hh-mm-ss.zip`.
+The submission file will be saved as `<YYYY-MM-DD_hh-mm-ss>.zip`.
 
 ### Visualization
 
@@ -99,7 +99,7 @@ The conversion results will be output to the `eval_inputs` directory.
 Next, evaluate using the following command:
 
 ```sh
-python3 TrackEval/scripts/run_smot4sb_challenge.py eval_inputs eval_outputs  val --metric-smot4sb
+python3 TrackEval/scripts/run_smot4sb_challenge.py eval_inputs eval_outputs val --metric-smot4sb
 ```
 
 The evaluation results will be saved in the `eval_outputs` directory.
