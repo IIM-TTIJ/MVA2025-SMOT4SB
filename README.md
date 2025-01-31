@@ -123,11 +123,21 @@ pip3 install -r requirements.txt
 pip3 install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
 cd OC_SORT
 python3 setup.py develop
+cd ..
 ```
 
 #### 3️⃣ Training
 
-First, get the COCO-pretrained YOLOX model from [this link](https://github.com/Megvii-BaseDetection/YOLOX/tree/0.1.0?tab=readme-ov-file#benchmark) (select from the "weights" column) and save them under `OC_SORT/pretrained`.
+First, run the following command under the project root to get the COCO-pretrained YOLOX model and save it under OC_SORT/pretrained:
+   
+```sh
+mkdir OC_SORT/pretrained
+wget -P OC_SORT/pretrained https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_x.pth
+```
+
+You can also use any model from [this link](https://github.com/Megvii-BaseDetection/YOLOX/tree/0.1.0?tab=readme-ov-file#benchmark).
+
+To train the model, run the following command:
 
 ```sh
 sh scripts/train.sh -f OC_SORT/exps/smot4sb.py -d 8 -b 48 --fp16 -c OC_SORT/pretrained/yolox_x.pth
