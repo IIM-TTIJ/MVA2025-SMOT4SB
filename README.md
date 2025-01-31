@@ -1,6 +1,36 @@
 # MVA2025-SMOT4SB Baseline Code
 
-## Submission
+<p align="center">
+  <img src="assets/smot4sb_logo.png" width=100%>
+</p>
+
+
+
+<div align="center">
+
+🚀 [**Challenge Page**](https://mva-org.jp/mva2025/challenge) **|** 📂 [**Dataset (TBA)**]((https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#) **|** 🔥 [**Baseline Code**](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB) **|** 📊 [**Leaderboard**](https://www.codabench.org/competitions/5101/)
+
+[![GitHub stars](https://img.shields.io/github/stars/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/network/members)
+[![LICENSE](https://img.shields.io/github/license/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/blob/main/LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8+-blue)](https://www.python.org/downloads/)
+[![GitHub Issues](https://img.shields.io/github/issues/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/issues)
+
+</div>
+
+
+## 🚀 About SMOT4SB Challenge
+
+The **SMOT4SB (Small Multi-Object Tracking for Spotting Birds)** challenge aims to advance object tracking and detection techniques for small objects in real-world scenarios. Participants are expected to develop tracking methods that improve the **SO-HOTA (Small Object Higher-Order Tracking Accuracy)** metric, a new evaluation criterion tailored for this challenge.
+
+🔹 **Task**: Small Multi-Object Tracking<br>
+🔹 **Dataset**: SMOT4SB dataset<br>
+🔹 **Metric**: SO-HOTA<br>
+
+For more details, visit the [**challenge webpage**](https://mva-org.jp/mva2025/challenge).
+
+
+## Submission format
 
 The submission format follows the TrackEval's format, which is based on the MOT Challenge format, as shown below:  
 
@@ -65,11 +95,11 @@ The meaning of each column may differ between ground truth (GT) and predictions 
 - Python 3.8.20
 - FFmpeg (Required if using the visualizer in scripts/visualize_for_mot_sub.py)
 
-### Usage
+## 📌 Quick Start
 
-#### Dataset preparation
+### 1️⃣ Dataset preparation
 
-Download the SMOT4SB dataset from [here]($DATASET_LINK), and place it under `datasets`. The directory structure should look like this:
+Download the SMOT4SB dataset from [here (TBA)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#), and place it under `datasets`. The directory structure should look like this:
 
 ```
 datasets
@@ -86,7 +116,7 @@ After that, run the following command to format the dataset according to the bas
 python3 scripts/prepare_dataset.py
 ```
 
-#### Package installation
+### 2️⃣ Package installation
 
 ```sh
 pip3 install -r requirements.txt
@@ -95,7 +125,7 @@ cd OC_SORT
 python3 setup.py develop
 ```
 
-#### Training
+### 3️⃣ Training
 
 First, get the COCO-pretrained YOLOX model from [this link](https://github.com/Megvii-BaseDetection/YOLOX/tree/0.1.0) and save them under `OC_SORT/pretrained`.
 
@@ -105,7 +135,7 @@ sh scripts/train.sh -f OC_SORT/exps/smot4sb.py -d 8 -b 48 --fp16 -c OC_SORT/pret
 
 Outputs will be saved under `YOLOX_outputs/smot4sb`.
 
-#### Prediction
+### 4️⃣ Prediction
 
 To make predictions using the trained model, run the following command:
 
@@ -115,7 +145,7 @@ sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB
 
 Outputs will be saved under `YOLOX_outputs/smot4sb/predictions` as MOT Challenge format.
 
-#### Submission
+### 5️⃣ Submission
 
 To submit the predictions, you need to compress the prediction txt files into a zip file. Run the following command to do so:
 
@@ -125,7 +155,9 @@ python3 scripts/create_submission.py -i YOLOX_outputs/smot4sb/predictions/pub_te
 
 The submission file will be saved as `<YYYY-MM-DD_hh-mm-ss>.zip`.
 
-#### Visualization
+## 🧰 How to use a tools
+
+### 👁️ Visualization
 
 To visualize the predictions, run the following command:
 
@@ -135,7 +167,7 @@ python3 scripts/visualize_for_mot_ch.py -m YOLOX_outputs/smot4sb/results/0.txt -
 
 This will generate a video named `prediction_0.mp4` in the cwd.
 
-#### Evaluation for validation dataset
+### 📊 Evaluation for validation dataset
 
 For evaluation, the ground truth (GT) and predictions must be in the format and directory structure compatible with TrackEval. The following commands prepare the necessary files:
 
@@ -159,3 +191,49 @@ python3 TrackEval/scripts/run_smot4sb_challenge.py eval_inputs eval_outputs val 
 ```
 
 The evaluation results will be saved in the `eval_outputs` directory.
+
+<!-- ## 🎥 Demos & Results
+📌 Sample detection and tracking results:
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/sample1.gif" width="300">
+      <br>Example 1
+    </td>
+    <td align="center">
+      <img src="assets/sample2.gif" width="300">
+      <br>Example 2
+    </td>
+  </tr>
+</table> -->
+
+
+
+## 📌 Citation
+
+If you use this baseline, please cite:
+```bibtex
+@inproceedings{mva2025_smot4sb_challenge,
+  title={{MVA2025 Small Multi-Object Tracking for Spotting Birds Challenge: Dataset, Methods, and Results}},
+  author={Yuki Kondo and Norimichi Ukita and Riku Kanayama and Yuki Yoshida and Takayuki Yamaguchi and [Challenge winners]},
+  booktitle={2025 19th International Conference on Machine Vision and Applications (MVA)},
+  note={\url{https://www.mva-org.jp/mva2025/challenge}},
+  year={2025}}
+Note: This paper is scheduled to be published in July 2025, and the title and other details are subject to change.
+```
+
+```bibtex
+@misc{baselinecode_mva2025_smot4sb_challenge,
+  title={{Baseline code for SMOT4SB by IIM-TTIJ}},
+  author={Riku Kanayama and Yuki Yoshida and Yuki Kondo},
+  license={MIT},
+  url={\url{https://github.com/IIM-TTIJ/MVA2025-SMOT4SB}},
+  year={2025}}
+```
+
+---
+
+## 🎨 Contributing
+
+We welcome contributions! If you find any issues or want to improve this repository, please submit a pull request.
