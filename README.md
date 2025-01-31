@@ -19,7 +19,7 @@
 </div>
 
 
-## 🚀 About SMOT4SB Challenge
+## 🏆 About SMOT4SB Challenge
 
 The **SMOT4SB (Small Multi-Object Tracking for Spotting Birds)** challenge aims to advance object tracking and detection techniques for small objects in real-world scenarios. Participants are expected to develop tracking methods that improve the **SO-HOTA (Small Object Higher-Order Tracking Accuracy)** metric, a new evaluation criterion tailored for this challenge.
 
@@ -30,7 +30,7 @@ The **SMOT4SB (Small Multi-Object Tracking for Spotting Birds)** challenge aims 
 For more details, visit the [**challenge webpage**](https://mva-org.jp/mva2025/challenge).
 
 
-## Submission format
+### Submission format
 
 The submission format follows the TrackEval's format, which is based on the MOT Challenge format, as shown below:  
 
@@ -88,16 +88,16 @@ The meaning of each column may differ between ground truth (GT) and predictions 
    </tr>
 </table>
 
-## About Baseline Code
+## 🚀 About Baseline Code
 
 ### Requirements
 
 - Python 3.8.20
 - FFmpeg (Required if using the visualizer in scripts/visualize_for_mot_sub.py)
 
-## 📌 Quick Start
+### 📌 Quick Start
 
-### 1️⃣ Dataset preparation
+#### 1️⃣ Dataset preparation
 
 Download the SMOT4SB dataset from [here (TBA)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#), and place it under `datasets`. The directory structure should look like this:
 
@@ -116,7 +116,7 @@ After that, run the following command to format the dataset according to the bas
 python3 scripts/prepare_dataset.py
 ```
 
-### 2️⃣ Package installation
+#### 2️⃣ Package installation
 
 ```sh
 pip3 install -r requirements.txt
@@ -125,7 +125,7 @@ cd OC_SORT
 python3 setup.py develop
 ```
 
-### 3️⃣ Training
+#### 3️⃣ Training
 
 First, get the COCO-pretrained YOLOX model from [this link](https://github.com/Megvii-BaseDetection/YOLOX/tree/0.1.0) and save them under `OC_SORT/pretrained`.
 
@@ -135,7 +135,7 @@ sh scripts/train.sh -f OC_SORT/exps/smot4sb.py -d 8 -b 48 --fp16 -c OC_SORT/pret
 
 Outputs will be saved under `YOLOX_outputs/smot4sb`.
 
-### 4️⃣ Prediction
+#### 4️⃣ Prediction
 
 To make predictions using the trained model, run the following command:
 
@@ -145,7 +145,7 @@ sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB
 
 Outputs will be saved under `YOLOX_outputs/smot4sb/predictions` as MOT Challenge format.
 
-### 5️⃣ Submission
+#### 5️⃣ Submission
 
 To submit the predictions, you need to compress the prediction txt files into a zip file. Run the following command to do so:
 
@@ -155,9 +155,9 @@ python3 scripts/create_submission.py -i YOLOX_outputs/smot4sb/predictions/pub_te
 
 The submission file will be saved as `<YYYY-MM-DD_hh-mm-ss>.zip`.
 
-## 🧰 How to use a tools
+### 🧰 How to use a tools
 
-### 👁️ Visualization
+#### 👁️ Visualization
 
 To visualize the predictions, run the following command:
 
@@ -167,7 +167,7 @@ python3 scripts/visualize_for_mot_ch.py -m YOLOX_outputs/smot4sb/results/0.txt -
 
 This will generate a video named `prediction_0.mp4` in the cwd.
 
-### 📊 Evaluation for validation dataset
+#### 📊 Evaluation for validation dataset
 
 For evaluation, the ground truth (GT) and predictions must be in the format and directory structure compatible with TrackEval. The following commands prepare the necessary files:
 
