@@ -1,5 +1,63 @@
 # MVA2025-SMOT4SB Baseline Code
 
+## Submission
+
+The submission format follows the TrackEval's format, which is based on the MOT Challenge format, as shown below:  
+
+```txt  
+1,1,912,484,97,109,0,7,1  
+2,1,912,484,97,109,0,7,1  
+3,1,912,484,97,109,0,7,1  
+...
+```
+
+The meaning of each column may differ between ground truth (GT) and predictions (pred). Please refer to the table below for details.
+
+<table>
+   <tr>
+      <th>cols</th>
+      <th>GT</th>
+      <th>pred</th>
+   </tr>
+   <tr>
+      <td align="center">1</td>
+      <td colspan="2" align="center">frame</td>
+   </tr>
+   <tr>
+      <td align="center">2</td>
+      <td colspan="2" align="center">track id</td>
+   </tr>
+   <tr>
+      <td align="center">3</td>
+      <td colspan="2" align="center">bbox left</td>
+   </tr>
+   <tr>
+      <td align="center">4</td>
+      <td colspan="2" align="center">bbox top</td>
+   </tr>
+   <tr>
+      <td align="center">5</td>
+      <td colspan="2" align="center">bbox width</td>
+   </tr>
+   <tr>
+      <td align="center">6</td>
+      <td colspan="2" align="center">bbox height</td>
+   </tr>
+   <tr>
+      <td align="center">7</td>
+      <td align="center">evaluation flag<br>(0 means not evaluated)</td>
+      <td align="center">confidence<br>(evaluated even if 0)</td>
+   </tr>
+   <tr>
+      <td align="center">8</td>
+      <td colspan="2" align="center">class id (fixed 1 for bird only)</td>
+   </tr>
+   <tr>
+      <td align="center">9</td>
+      <td colspan="2" align="center">visibility ratio (set to 1)</td>
+   </tr>
+</table>
+
 ## About Baseline Code
 
 ### Requirements
@@ -79,7 +137,7 @@ This will generate a video named `prediction_0.mp4` in the cwd.
 
 #### Evaluation for validation dataset
 
-For evaluation, the ground truth (gt) and predictions must be in the format and directory structure compatible with TrackEval. The following commands prepare the necessary files:
+For evaluation, the ground truth (GT) and predictions must be in the format and directory structure compatible with TrackEval. The following commands prepare the necessary files:
 
 ```sh
 # Make predictions on the validation data
@@ -88,7 +146,7 @@ sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB
 # Modify the directory structure of the predictions
 python scripts/cp_preds_for_eval.py -i YOLOX_outputs/smot4sb/predictions/val/ -o eval_inputs
 
-# Prepare the gt
+# Prepare the GT
 python3 scripts/oc_sort_ann_to_mot_ch.py -i OC_SORT/datasets/SMOT4SB/annotations/val.json -o eval_inputs
 ```
 
