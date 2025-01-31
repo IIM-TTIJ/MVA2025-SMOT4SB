@@ -210,7 +210,7 @@ The evaluation results will be saved in the `eval_outputs` directory.
 
 
 
-## 📌 Citation
+## 📜 Citation
 
 If you use this baseline, please cite:
 ```bibtex
