@@ -29,6 +29,7 @@ The **SMOT4SB (Small Multi-Object Tracking for Spotting Birds)** challenge aims 
 
 For more details, visit the [**challenge webpage**](https://mva-org.jp/mva2025/challenge).
 
+Additionally, the [**SOD4SB Challenge@MVA2023**](https://www.mva-org.jp/mva2023/index.php?id=challenge) baseline model ([GitHub repository](https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4SpottingBirds)) and dataset ([Google Drive](https://drive.google.com/drive/u/1/folders/1vTHiIelagbzPO795yhOdNUFh9u2XxZP-)) are also available for use.
 
 ### Submission format
 
