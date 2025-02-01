@@ -186,10 +186,12 @@ Once the submission file is generated, go to the [**CodaBench Submission Page**]
 To visualize the predictions, run the following command:
 
 ```sh
-python3 scripts/visualize_for_mot_ch.py -m YOLOX_outputs/smot4sb/results/0.txt -o prediction_0 -i OC_SORT/datasets/SMOT4SB/pub_test/0 --mp4 --show-bbox
+python3 scripts/visualize_for_mot_ch.py -m YOLOX_outputs/smot4sb/predictions/pub_test/0001.txt -o visualized_video -i OC_SORT/datasets/SMOT4SB/pub_test/0001 --mp4 --show-bbox
 ```
 
-This will generate a video named `prediction_0.mp4` in the cwd.
+This will generate a video named `visualized_video.mp4` in the cwd.
+
+The `0001` represents the video name, matching a subdirectory under `datasets/SMOT4SB/pub_test`. To process a different video, replace `0001` in both the `-m` and `-i` options with the corresponding video name.
 
 #### 📊 Evaluation for validation dataset
 
