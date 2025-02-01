@@ -183,7 +183,7 @@ For evaluation, the ground truth (GT) and predictions must be in the format and 
 
 ```sh
 # Make predictions on the validation data
-sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB/val--ckpt YOLOX_outputs/smot4sb/best_ckpt.pth.tar
+sh scripts/predict.sh -f OC_SORT/exps/smot4sb.py --path OC_SORT/datasets/SMOT4SB/val --ckpt YOLOX_outputs/smot4sb/best_ckpt.pth.tar
 
 # Modify the directory structure of the predictions
 python scripts/cp_preds_for_eval.py -i YOLOX_outputs/smot4sb/predictions/val/ -o eval_inputs
