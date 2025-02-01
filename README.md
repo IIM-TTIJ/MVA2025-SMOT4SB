@@ -98,6 +98,16 @@ The meaning of each column may differ between ground truth (GT) and predictions 
 
 ### 📌 Quick Start
 
+
+#### 0️⃣ Clone the repository with submodules
+
+To properly clone this repository along with its submodules, use the following command:
+
+```sh
+git clone --recurse-submodules https://github.com/IIM-TTIJ/MVA2025-SMOT4SB.git
+cd MVA2025-SMOT4SB
+```
+
 #### 1️⃣ Dataset preparation
 
 Download the SMOT4SB dataset from [here (TBA)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#), and place it under `datasets`. The directory structure should look like this:
