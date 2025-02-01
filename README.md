@@ -165,6 +165,9 @@ python3 scripts/create_submission.py -i YOLOX_outputs/smot4sb/predictions/pub_te
 
 The submission file will be saved as `<YYYY-MM-DD_hh-mm-ss>.zip`.
 
+Once the submission file is generated, go to the [**CodaBench Submission Page**](https://www.codabench.org/competitions/5101/#/participate-tab) and upload your zip file under the **My Submission** tab. Your submission will be evaluated automatically, and the results will be displayed on the leaderboard.
+
+
 ### 🧰 How to use a tools
 
 #### 👁️ Visualization
