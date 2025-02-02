@@ -221,9 +221,6 @@ The evaluation results will be saved in the `eval_outputs` directory.
 ## 🎥 Demos & Results
 📌 Sample detection and tracking results:
 
-## 🎥 Demos & Results
-📌 Sample detection and tracking results:
-
 <table>
   <tr>
     <td align="center">
