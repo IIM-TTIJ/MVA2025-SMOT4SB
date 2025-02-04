@@ -8,7 +8,7 @@
 
 <div align="center">
 
-🚀 [**Challenge Page**](https://mva-org.jp/mva2025/challenge) **|** 📂 [**Dataset (TBA)**](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#) **|** 🔥 [**Baseline Code**](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB) **|** 📊 [**Leaderboard**](https://www.codabench.org/competitions/5101/)
+🏆 [**Challenge Page**](https://mva-org.jp/mva2025/challenge) **|** 📂 [**Dataset**](https://drive.google.com/drive/folders/1Y1J13W6VlgDh-L28n_mVbs7HIfo_Hv5s?usp=sharing) **|** 🔥 [**Baseline Code**](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB) **|** 📊 [**Leaderboard**](https://www.codabench.org/competitions/5101/)
 
 [![GitHub stars](https://img.shields.io/github/stars/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/IIM-TTIJ/MVA2025-SMOT4SB)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/network/members)
@@ -110,7 +110,7 @@ cd MVA2025-SMOT4SB
 
 #### 1️⃣ Dataset preparation
 
-Download the SMOT4SB dataset from [here (TBA)](https://github.com/IIM-TTIJ/MVA2025-SMOT4SB/#), and place it under `datasets`. The directory structure should look like this:
+Download the SMOT4SB dataset from [here](https://iim-ttij.slack.com/archives/D01P25M73A8/p1738659399186479), and place it under `datasets`. The directory structure should look like this:
 
 ```
 datasets
