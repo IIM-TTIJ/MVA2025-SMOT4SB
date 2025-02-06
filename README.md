@@ -110,7 +110,7 @@ cd MVA2025-SMOT4SB
 
 #### 1️⃣ Dataset preparation
 
-Download the SMOT4SB dataset from [here](https://iim-ttij.slack.com/archives/D01P25M73A8/p1738659399186479), and place it under `datasets`. The directory structure should look like this:
+Download the SMOT4SB dataset from [here](https://drive.google.com/drive/folders/1Y1J13W6VlgDh-L28n_mVbs7HIfo_Hv5s?usp=sharing), and place it under `datasets`. The directory structure should look like this:
 
 ```
 datasets
