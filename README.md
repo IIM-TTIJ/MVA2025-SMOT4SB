@@ -127,6 +127,12 @@ After that, run the following command to format the dataset according to the bas
 python3 scripts/prepare_dataset.py
 ```
 
+**Note:** If you run this script again, you will encounter an error because symbolic links have already been placed in `OC_SORT/datasets`. In that case, make sure to run the following command before executing the script to unlink the symbolic links:
+
+```sh
+find OC_SORT/datasets/SMOT4SB -type l -exec unlink {} \;
+```
+
 #### 2️⃣ Package installation
 
 ```sh
