@@ -153,23 +153,35 @@ def save(images, out_file, mp4):
 
 
 def write_mp4(pil_images, file_name):
+    import tempfile
+    import subprocess
+
     bar = tqdm(
         total=len(pil_images) + 2, desc="Write to MP4  ", bar_format=tqdm_bar_format
     )
-    tmp_file_name = f"{file_name}.tmp.mp4"
-    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-    video = cv2.VideoWriter(tmp_file_name, fourcc, 10, pil_images[0].size)
-    for pil_image in pil_images:
-        video.write(cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR))
+
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        for idx, pil_image in enumerate(pil_images):
+            path = os.path.join(tmp_dir, f"frame_{idx:05d}.png")
+            pil_image.save(path)
+            bar.update(1)
+
+        ffmpeg_cmd = [
+            "ffmpeg",
+            "-y",  # overwrite without asking
+            "-framerate", "10",
+            "-i", os.path.join(tmp_dir, "frame_%05d.png"),
+            "-c:v", "libx264",
+            "-pix_fmt", "yuv420p",
+            file_name,
+        ]
+
+        subprocess.run(ffmpeg_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         bar.update(1)
-    video.release()
+
     bar.update(1)
-    ffmpeg.input(tmp_file_name).output(file_name, vcodec="libx264").run(
-        overwrite_output=True, quiet=True
-    )
-    bar.update(1)
-    os.remove(tmp_file_name)
     bar.close()
+
 
 
 if __name__ == "__main__":
