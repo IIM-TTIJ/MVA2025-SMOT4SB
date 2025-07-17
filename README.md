@@ -250,13 +250,13 @@ The evaluation results will be saved in the `eval_outputs` directory.
 
 If you use this baseline, please cite:
 ```bibtex
-@inproceedings{mva2025_smot4sb_challenge,
-  title={{MVA 2025 Small Multi-Object Tracking for Spotting Birds Challenge: Dataset, Methods, and Results}},
-  author={Yuki Kondo and Norimichi Ukita and Riku Kanayama and Yuki Yoshida and Takayuki Yamaguchi and [Challenge winners]},
-  booktitle={2025 19th International Conference on Machine Vision and Applications (MVA)},
-  note={\url{https://www.mva-org.jp/mva2025/challenge}},
-  year={2025}}
-Note: This paper is scheduled to be published in July 2025, and the title and other details are subject to change.
+@inproceedings{kondo2025smot4sb,
+  title     = {{MVA 2025 Small Multi-Object Tracking for Spotting Birds Challenge: Dataset, Methods, and Results}},
+  author    = {Yuki Kondo and Norimichi Ukita and Riku Kanayama and Yuki Yoshida and Takayuki Yamaguchi and Xiang Yu and Guang Liang and Xinyao Liu and Guan-Zhang Wang and Wei-Ta Chu and Bing-Cheng Chuang and Jia-Hua Lee and Pin-Tseng Kuo and I-Hsuan Chu and Yi-Shein Hsiao and Cheng-Han Wu and Po-Yi Wu and Jui-Chien Tsou and Hsuan-Chi Liu and Chun-Yi Lee and Yuan-Fu Yang and Kosuke Shigematsu and Asuka Shin and Ba Tran},
+  booktitle = {2025 19th International Conference on Machine Vision and Applications (MVA)},
+  year      = {2025},
+  note      = {\url{https://www.mva-org.jp/mva2025/challenge}},
+}
 ```
 
 ```bibtex
